@@ -1,0 +1,48 @@
+buildscript{
+    /* ext : build.gradle에서 사용하는 전역변수를 사용하겠다.
+    * 여기서는 springBootVersion 전역변수를 생성, 그 값을 2.1.7~로 설정
+    * 즉 s-b-g-p 라는 스프링부트 그레이들 플러그인의 2.1.7릴리즈를 의존성으로 받겠다.*/
+
+    ext {
+        springBootVersion = '2.1.7.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+
+/* 앞서 선언한 의존성들을 적용할 것인지를 결정 */
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.jojoldu.book'
+version '1.0-SNAPSHOT'
+
+/* 각종 의존성(라이브러리)들을 어떤 원격 저장소에서 받을 것인지 결정
+ * mavenCentral을 주로 사용하지만, 라이브러리 업도르 난이도 때문에 jcenter 사용
+ */
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+/* 프로젝트 개발에 필요한 의존성들을 선언하는 곳 */
+dependencies {
+    //testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    // testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
+
+test {
+    useJUnitPlatform()
+}
