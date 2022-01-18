@@ -1,0 +1,10 @@
+1. annotation : @something
+
+2. Orm은 객체를 매핑하는 것이고, SQL Mapper는 쿼리를 매핑하는 것이다.
+
+3. packages
+
+4. SpringBoot Reference :
+        https://docs.spring.io/spring-boot/docs/current/reference/html/index.html
+
+5. add later
