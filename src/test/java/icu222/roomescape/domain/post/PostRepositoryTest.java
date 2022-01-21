@@ -13,14 +13,19 @@ import org.junit.jupiter.api.Test;
 // 해당 패키지는 책의 .runner.Runwith 대신 사용
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+
+/*
+ * 테스트를 다시 하니깐 에러가 나서 SpringBootTest로 변경 01/21
+ *
+ */
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest(controllers = testController.class)
+@SpringBootTest
 public class PostRepositoryTest {
 
     @Autowired
