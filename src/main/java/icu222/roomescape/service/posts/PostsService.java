@@ -1,6 +1,7 @@
 package icu222.roomescape.service.posts;
 
 import icu222.roomescape.domain.posts.PostRepository;
+import icu222.roomescape.web.dto.PostsSaveRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

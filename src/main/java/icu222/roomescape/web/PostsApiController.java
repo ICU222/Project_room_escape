@@ -1,5 +1,7 @@
 package icu222.roomescape.web;
 
+import icu222.roomescape.service.posts.PostsService;
+import icu222.roomescape.web.dto.PostsSaveRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
