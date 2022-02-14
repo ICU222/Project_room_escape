@@ -21,6 +21,7 @@ public class PostsSaveRequestDto {
         this.author = author;
     }
 
+    // find out explanation of this func
     public Posts toEntity(){
         return Posts.builder()
                 .title(title)
